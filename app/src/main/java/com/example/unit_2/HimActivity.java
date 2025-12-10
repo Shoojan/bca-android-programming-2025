@@ -22,6 +22,10 @@ public class HimActivity extends AppCompatActivity {
 
     private final int REQUEST_CODE = 1;
 
+
+    /**
+     * Activity Result Launcher
+     */
     ActivityResultLauncher<Intent> activityResultLauncher= registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -66,9 +70,9 @@ public class HimActivity extends AppCompatActivity {
                         }
                         Intent giftIntent = new Intent(HimActivity.this, HerActivity.class );
                         giftIntent.putExtra(Constant.GIFT,gift);
-//                        startActivityForResult(giftIntent, REQUEST_CODE);
+                        startActivityForResult(giftIntent, REQUEST_CODE);
 
-                        activityResultLauncher.launch(giftIntent);
+//                        activityResultLauncher.launch(giftIntent);
                     }
                 }
         );
