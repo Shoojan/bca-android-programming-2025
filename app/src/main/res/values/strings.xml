@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Unit-2</string>
+    <string-array name="profileStatus">
+        <item>Bored 🥱</item>
+        <item>Excited 🤩</item>
+        <item>Happy 😁</item>
+        <item>Sad 🥹</item>
+    </string-array>
+</resources>

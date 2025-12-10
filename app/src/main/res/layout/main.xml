@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_margin="10sp">
+
+    <!--    Navigation Section -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        android:layout_marginBottom="10sp"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCA 6"
+                android:layout_marginLeft="@dimen/image_button_margin"
+                android:textColor="@color/primary"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="@dimen/image_button_size"
+                android:layout_height="@dimen/image_button_size"
+                android:layout_margin="@dimen/image_button_margin"
+                android:background="@drawable/circular_base"
+                android:src="@drawable/baseline_ac_unit_24"
+                android:scaleType="centerInside"
+                app:tint="@color/white"
+                />
+
+            <ImageButton
+                android:layout_width="@dimen/image_button_size"
+                android:layout_height="@dimen/image_button_size"
+                android:layout_margin="@dimen/image_button_margin"
+                android:background="@drawable/circular_base"
+                android:src="@drawable/baseline_add_home_24"
+                app:tint="@color/white"
+                />
+
+            <ImageButton
+                android:layout_width="@dimen/image_button_size"
+                android:layout_height="@dimen/image_button_size"
+                android:layout_margin="@dimen/image_button_margin"
+                android:background="@drawable/circular_base"
+                android:src="@drawable/baseline_add_circle_outline_24"
+                app:tint="@color/white"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+    <!--    Profile Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:src="@drawable/profile_image1"
+            android:background="@drawable/circular_base"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5sp"
+            />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ichya Sapkota"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_toRightOf="@+id/profileImageView"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5sp"
+            />
+
+        <TextView
+            android:id="@+id/profileStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feeling "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/profileImageView"
+            android:layout_below="@id/profileName"
+            android:layout_marginLeft="5sp"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profileStatusTitle"
+            android:layout_below="@id/profileName"
+            android:entries="@array/profileStatus"
+            android:spinnerMode="dialog"
+            />
+
+    </RelativeLayout>
+
+    <!--    Post Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/postImageView"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@drawable/circular_base"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manoj Gopali"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/postImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/postPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 min ago"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/postImageView"
+            app:layout_constraintTop_toBottomOf="@id/postProfileName"
+            />
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="220sp"
+            android:src="@drawable/wallpaper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
