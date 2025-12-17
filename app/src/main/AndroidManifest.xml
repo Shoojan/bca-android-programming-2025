@@ -13,16 +13,25 @@
         android:theme="@style/Theme.Unit2"
         tools:targetApi="31">
         <activity
-            android:name=".HerActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HimActivity"
+            android:name=".fragments.FragmentDemoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".HerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HimActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".LoginActivity"
